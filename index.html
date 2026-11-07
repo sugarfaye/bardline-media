@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bardline Media | Theatrical & Performing Arts Production</title>
+  <meta name="description" content="Bardline Media produces live theatrical captures, cinematic stage recordings, and educational digital programs for performing arts organizations across North America.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎭</text></svg>">
+  <style>
+    :root {
+      --bg-dark: #0a0b0e;
+      --bg-card: #12141a;
+      --bg-elevated: #1a1d26;
+      --gold: #d4af37;
+      --gold-light: #f3e5ab;
+      --gold-dim: rgba(212, 175, 55, 0.15);
+      --text-main: #f0f2f5;
+      --text-muted: #9ba3af;
+      --text-sub: #6b7280;
+      --border: rgba(212, 175, 55, 0.2);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --font-display: 'Cinzel', Georgia, serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Container & Layout */
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header & Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10, 11, 14, 0.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    .brand-logo {
+      width: 40px;
+      height: 40px;
+      background: radial-gradient(circle at 30% 30%, #f3e5ab, #d4af37 60%, #8c7320);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 20px;
+      color: #0a0b0e;
+      box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+
+    .brand-tagline {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    nav ul {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .nav-btn {
+      padding: 9px 20px;
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .nav-btn:hover {
+      background: var(--gold);
+      color: #0a0b0e;
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      padding: 120px 0 100px;
+      background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(212, 175, 55, 0.18), transparent 70%);
+      text-align: center;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: var(--gold-dim);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: 52px;
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+      max-width: 900px;
+      margin: 0 auto 24px;
+      background: linear-gradient(180deg, #ffffff 40%, #c4cbd4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, #f3e5ab, #d4af37);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-desc {
+      font-size: 18px;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .btn-primary {
+      padding: 14px 32px;
+      background: linear-gradient(135deg, #d4af37, #b89326);
+      color: #0a0b0e;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(212, 175, 55, 0.35);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #e4be45, #cfa832);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(212, 175, 55, 0.5);
+    }
+
+    .btn-secondary {
+      padding: 14px 32px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+      border-radius: 4px;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--border);
+      color: var(--gold);
+      background: var(--bg-elevated);
+    }
+
+    /* Stats Strip */
+    .stats {
+      padding: 48px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      background: rgba(18, 20, 26, 0.5);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Section Header */
+    .section {
+      padding: 96px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 60px;
+    }
+
+    .section-tag {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 36px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 16px;
+    }
+
+    /* About Grid */
+    .about-wrap {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .about-content p {
+      color: var(--text-muted);
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .about-features {
+      list-style: none;
+      margin-top: 28px;
+    }
+
+    .about-features li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text-main);
+      font-size: 15px;
+      margin-bottom: 14px;
+    }
+
+    .about-features li span {
+      color: var(--gold);
+      font-size: 18px;
+    }
+
+    .about-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 40px;
+      position: relative;
+    }
+
+    .about-card::before {
+      content: '"';
+      position: absolute;
+      top: 10px;
+      left: 24px;
+      font-family: var(--font-display);
+      font-size: 100px;
+      color: rgba(212, 175, 55, 0.12);
+      line-height: 1;
+    }
+
+    .quote-text {
+      font-family: var(--font-display);
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--text-main);
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+
+    .quote-author {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .quote-role {
+      font-size: 12px;
+      color: var(--text-sub);
+    }
+
+    /* Productions / Projects */
+    .prod-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .prod-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .prod-card:hover {
+      border-color: var(--border);
+      transform: translateY(-6px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+    }
+
+    .prod-thumb {
+      height: 200px;
+      background: linear-gradient(135deg, #1f2330, #13151c);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .prod-thumb-icon {
+      font-size: 54px;
+      opacity: 0.85;
+    }
+
+    .prod-badge {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      padding: 4px 10px;
+      background: rgba(10, 11, 14, 0.85);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-size: 11px;
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .prod-body {
+      padding: 28px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .prod-season {
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .prod-title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+
+    .prod-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .prod-meta {
+      font-size: 12px;
+      color: var(--text-sub);
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 14px;
+    }
+
+    /* Capabilities / Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 32px;
+      transition: border-color 0.3s;
+    }
+
+    .service-item:hover {
+      border-color: var(--border);
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--gold-dim);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .service-title {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .service-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Team Section */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .team-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 36px 28px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .team-card.featured {
+      border-color: var(--border);
+      background: linear-gradient(180deg, rgba(212, 175, 55, 0.05), var(--bg-card));
+      box-shadow: 0 0 30px rgba(212, 175, 55, 0.08);
+    }
+
+    .team-avatar {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: var(--bg-elevated);
+      border: 2px solid var(--border);
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+    }
+
+    .team-name {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .team-role {
+      font-size: 13px;
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .team-bio {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .team-email {
+      display: inline-block;
+      font-size: 12px;
+      color: var(--gold-light);
+      text-decoration: none;
+      padding: 6px 14px;
+      background: var(--gold-dim);
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      transition: all 0.2s;
+    }
+
+    .team-email:hover {
+      background: var(--gold);
+      color: #0a0b0e;
+    }
+
+    /* Contact Section */
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 56px;
+    }
+
+    .contact-info h3 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .contact-info p {
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .contact-detail {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .contact-icon {
+      color: var(--gold);
+      font-size: 20px;
+      margin-top: 2px;
+    }
+
+    .contact-text-label {
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-sub);
+    }
+
+    .contact-text-val {
+      font-size: 15px;
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    .form-control {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: 4px;
+      padding: 12px 16px;
+      color: #fff;
+      font-size: 14px;
+      font-family: var(--font-body);
+      transition: border-color 0.2s;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--gold);
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 60px 0 36px;
+      background: #07080a;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: var(--text-sub);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .hero-title { font-size: 38px; }
+      .about-wrap, .contact-wrap { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .prod-grid, .team-grid, .services-grid { grid-template-columns: 1fr; }
+      nav ul { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container nav-wrap">
+      <a href="#" class="brand">
+        <div class="brand-logo">B</div>
+        <div class="brand-text">
+          <span class="brand-name">Bardline Media</span>
+          <span class="brand-tagline">Performing Arts & Theatrical Capture</span>
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#productions">Productions</a></li>
+          <li><a href="#services">Capabilities</a></li>
+          <li><a href="#team">Production Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#contact" class="nav-btn">Contact Office</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">American Shakespeare Theatre Initiative</div>
+      <h1 class="hero-title">Bridging <span>Classical Stagecraft</span> with Contemporary Cinema</h1>
+      <p class="hero-desc">Bardline Media captures, curates, and produces high-definition stage adaptations, live broadcast captures, and educational multi-media archives for performing arts companies nationwide.</p>
+      <div class="hero-actions">
+        <a href="#productions" class="btn-primary">View Current Works</a>
+        <a href="#contact" class="btn-secondary">Production Inquiries</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Strip -->
+  <section class="stats">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <div class="stat-number">48+</div>
+        <div class="stat-label">Stage Works Captured</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">4K HDR</div>
+        <div class="stat-label">Cinema-Grade Broadcast</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">12</div>
+        <div class="stat-label">Partner Theatres & Guilds</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Original Archival Fidelity</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container about-wrap">
+      <div class="about-content">
+        <span class="section-tag">About Our Studio</span>
+        <h2 class="section-title">Preserving the Ephemeral Power of Live Theatre</h2>
+        <p>Founded under the creative legacy of classical American repertory theatre, Bardline Media operates at the intersection of live performance and cinematic storytelling. We work directly with artistic directors, playwrights, and ensemble casts to translate the intimacy of the proscenium onto digital platforms.</p>
+        <p>Our multidisciplinary team manages every phase of production logistics—from pre-run blocking consultations and technical multi-cam captures to post-production color grading, spatial audio mixing, and international distribution streaming workflows.</p>
+        <ul class="about-features">
+          <li><span>✓</span> Ultra-low footprint multi-camera setups preserving the live audience experience</li>
+          <li><span>✓</span> Dedicated coordination and licensing workflows with theatrical unions (AEA, SDC, USA829)</li>
+          <li><span>✓</span> Comprehensive educational licensing and high-fidelity institutional archiving</li>
+        </ul>
+      </div>
+      <div class="about-card">
+        <p class="quote-text">"Theatre exists in the shared breath of the moment. Bardline's mission is not merely to record a performance, but to capture the emotional truth and vital rhythm that makes classical drama endure."</p>
+        <div class="quote-author">Marcus Vance</div>
+        <div class="quote-role">Artistic Director & Executive Producer</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Productions Section -->
+  <section class="section" id="productions" style="background: rgba(18, 20, 26, 0.35);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Featured Portfolio</span>
+        <h2 class="section-title">Selected Stage & Screen Works</h2>
+        <p class="section-desc">Recent digital captures and co-productions developed for theatrical streaming, international festival screening, and educational institutions.</p>
+      </div>
+
+      <div class="prod-grid">
+        <div class="prod-card">
+          <div class="prod-thumb">
+            <span class="prod-thumb-icon">🎭</span>
+            <span class="prod-badge">Featured Capture</span>
+          </div>
+          <div class="prod-body">
+            <div class="prod-season">2026 Repertory Series</div>
+            <h3 class="prod-title">A Midsummer Night's Dream</h3>
+            <p class="prod-desc">A lush, dynamic multi-camera cinematic capture of the celebrated Connecticut summer stage run, featuring naturalistic lighting and spatial Dolby Atmos sound design.</p>
+            <div class="prod-meta">Format: 4K UHD Master · Running Time: 138 min</div>
+          </div>
+        </div>
+
+        <div class="prod-card">
+          <div class="prod-thumb">
+            <span class="prod-thumb-icon">🗡️</span>
+            <span class="prod-badge">Touring Media</span>
+          </div>
+          <div class="prod-body">
+            <div class="prod-season">Classical Reimagined</div>
+            <h3 class="prod-title">Hamlet: The Elsinore Sessions</h3>
+            <p class="prod-desc">An intimate black-box stage adaptation produced with regional repertory companies, exploring psychological realism through tight visual framing and cinematic close-ups.</p>
+            <div class="prod-meta">Format: 4K HDR · Running Time: 162 min</div>
+          </div>
+        </div>
+
+        <div class="prod-card">
+          <div class="prod-thumb">
+            <span class="prod-thumb-icon">🌊</span>
+            <span class="prod-badge">Special Broadcast</span>
+          </div>
+          <div class="prod-body">
+            <div class="prod-season">Archival Premiere</div>
+            <h3 class="prod-title">The Tempest: Digital Prologue</h3>
+            <p class="prod-desc">An experimental staging combining projection mapping with live performance, engineered for institutional interactive curricula and community screening series.</p>
+            <div class="prod-meta">Format: Immersive AV Edition · Running Time: 114 min</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capabilities Section -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Capabilities</span>
+        <h2 class="section-title">Full-Lifecycle Production Services</h2>
+        <p class="section-desc">From stage floor coordination to final digital delivery, we provide end-to-end production support tailored to performing arts groups.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-item">
+          <div class="service-icon">🎬</div>
+          <h3 class="service-title">Multi-Cam Stage Capture</h3>
+          <p class="service-desc">State-of-the-art 4K/6K cinema cameras deployed on silent motorized rigs, capturing live repertory performances without obstructing patrons.</p>
+        </div>
+
+        <div class="service-item">
+          <div class="service-icon">📋</div>
+          <h3 class="service-title">Production Coordination</h3>
+          <p class="service-desc">Full schedule management, theatrical crew liaison, call sheets, vendor contracts, and logistics handling led by dedicated production coordinators.</p>
+        </div>
+
+        <div class="service-item">
+          <div class="service-icon">🎧</div>
+          <h3 class="service-title">Acoustic & Spatial Audio</h3>
+          <p class="service-desc">Multi-track wireless mic coordination, stage boundary microphone arrays, and Dolby Atmos audio mixing that faithfully replicates auditorium acoustic spatiality.</p>
+        </div>
+
+        <div class="service-item">
+          <div class="service-icon">📜</div>
+          <h3 class="service-title">Rights & Guild Clearance</h3>
+          <p class="service-desc">Standardized negotiation assistance for streaming allowances, archival exemptions, and educational secondary-use waivers across creative unions.</p>
+        </div>
+
+        <div class="service-item">
+          <div class="service-icon">🏛️</div>
+          <h3 class="service-title">Institutional Archiving</h3>
+          <p class="service-desc">LTO tape long-term storage and ProRes master deliverables prepared to Library of Congress and museum digital preservation standards.</p>
+        </div>
+
+        <div class="service-item">
+          <div class="service-icon">🌐</div>
+          <h3 class="service-title">Streaming & Digital Distribution</h3>
+          <p class="service-desc">Secure VOD portal delivery, tokenized subscriber access, and geoblocked distribution pipelines tailored to seasonal member patrons.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="section" id="team" style="background: rgba(18, 20, 26, 0.35);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Key Personnel</span>
+        <h2 class="section-title">Production Leadership</h2>
+        <p class="section-desc">Our core production unit ensures seamless logistical management and artistic rigor across every active run.</p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">🎭</div>
+          <h3 class="team-name">Marcus Vance</h3>
+          <div class="team-role">Artistic Director & Producer</div>
+          <p class="team-bio">Over 18 years producing and directing classical drama with regional repertory companies across New England and New York.</p>
+          <span class="team-email">marcus@americanshakespearetheatre.org</span>
+        </div>
+
+        <!-- Featured Sophie Reed matching the application -->
+        <div class="team-card featured">
+          <div class="team-avatar">📋</div>
+          <h3 class="team-name">Sophie Reed</h3>
+          <div class="team-role">Production Coordinator</div>
+          <p class="team-bio">Directs daily operational scheduling, vendor liaisons, filming permits, and digital pipeline coordination for Bardline Media's active theatrical runs.</p>
+          <a href="mailto:sophie.reed@americanshakespearetheatre.org" class="team-email">sophie.reed@americanshakespearetheatre.org</a>
+        </div>
+
+        <div class="team-card">
+          <div class="team-avatar">🎥</div>
+          <h3 class="team-name">David Chen</h3>
+          <div class="team-role">Director of Photography</div>
+          <p class="team-bio">Specialist in low-light live theatrical cinematography, multi-camera synchronization, and broadcast-standard color mastering.</p>
+          <span class="team-email">david@americanshakespearetheatre.org</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-wrap">
+        <div class="contact-info">
+          <span class="section-tag">Get In Touch</span>
+          <h3>Let's Discuss Your Upcoming Season</h3>
+          <p>Whether you represent a regional theatre company planning a digital capture run or require institutional archiving services, our production office is available to coordinate schedules and project scoping.</p>
+
+          <div class="contact-detail">
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <div class="contact-text-label">Studio & Production Office</div>
+                <div class="contact-text-val">American Shakespeare Theatre Complex, Stratford, CT / New York, NY</div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <div class="contact-text-label">Production Office Contact</div>
+                <div class="contact-text-val">sophie.reed@americanshakespearetheatre.org</div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <div>
+                <div class="contact-text-label">General Administration</div>
+                <div class="contact-text-val">contact@americanshakespearetheatre.org</div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">🌐</div>
+              <div>
+                <div class="contact-text-label">Official Domain</div>
+                <div class="contact-text-val">americanshakespearetheatre.org</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you. Your message has been received by our production office.');">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" class="form-control" placeholder="E.g., Julian Scott" required>
+          </div>
+          <div class="form-group">
+            <label for="org">Organization / Company</label>
+            <input type="text" id="org" class="form-control" placeholder="E.g., Metropolitan Repertory" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Work Email</label>
+            <input type="email" id="email" class="form-control" placeholder="name@organization.org" required>
+          </div>
+          <div class="form-group">
+            <label for="inquiry">Nature of Inquiry</label>
+            <select id="inquiry" class="form-control">
+              <option>Stage Capture & Recording</option>
+              <option>Production Logistics / Coordination</option>
+              <option>Institutional Archiving & Licensing</option>
+              <option>General Media Inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" class="form-control" placeholder="Outline your project scope, seasonal timeline, or specific requirements..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="border: none; cursor: pointer; margin-top: 8px;">Submit Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <a href="#" class="brand">
+          <div class="brand-logo">B</div>
+          <div class="brand-text">
+            <span class="brand-name">Bardline Media</span>
+            <span class="brand-tagline">American Shakespeare Theatre Initiative</span>
+          </div>
+        </a>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#productions">Portfolio</a></li>
+          <li><a href="#services">Capabilities</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Bardline Media / American Shakespeare Theatre Initiative. All rights reserved.</div>
+        <div style="color: var(--text-sub);">Production Coordinator: Sophie Reed · Stratford, CT & New York, NY</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
